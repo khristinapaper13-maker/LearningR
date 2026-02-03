@@ -1,0 +1,43 @@
+---
+title: "Reproducible Document"
+author: "rostools"
+format: html
+editor: visual
+---
+
+
+```{r setup}
+library(tidyverse)
+```
+
+## Colorectal Research Unit
+
+- learning
+-  important 
+- for 
+- everything 
+- Kostyrko Christina
+- Research Assistant
+
+
+**I live in Copenhagen and have a sister!**
+*I loooooove research*
+```{r}
+# new chunck 
+ 3*3
+```
+
+## Simple code 
+
+
+
+
+
+## Writing R code
+
+2+2
+
+```{r}
+2+2
+```
+
