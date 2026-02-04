@@ -15,6 +15,8 @@ library(tidyverse)
 
 post_meal_data <-
   read_csv2(here::here("data/post-meal-insulin.csv"))
+
+small_post_meal_data <- select(post_meal_data, id, Age, BMI, Group, auc_pg, auc_ins, glykemi)
 ```
 
 ## Colorectal Research Unit
@@ -24,20 +26,6 @@ post_meal_data <-
 
 **I live in Copenhagen and have a sister!** *I loooooove research*
 
-```{r}
-# new chunck
-3 * 3
-```
-
-## Simple code
-
-## Writing R code
-
-2+2
-
-```{r}
-2 + 2
-```
 
 ## Testing for Git
 
@@ -105,4 +93,33 @@ ggplot(post_meal_data, aes(x = glykemi)) +
 ggplot(post_meal_data, aes(x = BMI, y = auc_pg)) +
   geom_point() +
   geom_smooth()
+```
+
+
+## GitHub Token 
+
+
+## Selecting data
+
+```{r}
+select(post_meal_data, Age, BMI, Weight)
+
+select(post_meal_data, -Group)
+
+select(post_meal_data, starts_with("PG"))
+
+select(post_meal_data, ends_with("DXA"))
+
+select(post_meal_data, contains("0"))
+```
+
+
+## Renaming columns
+
+```{r}
+small_post_meal_data |>
+  rename(
+    auc_glucose = auc_pg,
+    auc_insuline = auc_ins
+  )
 ```
