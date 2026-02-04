@@ -7,14 +7,13 @@ editor: visual
 
 ```{r setup}
 library(tidyverse)
+
+post_meal_data <- read_csv2(here::here("data/post-meal-insulin.csv"))
+
 ```
 
 ## Colorectal Research Unit
 
--   learning
--   important
--   for
--   everything
 -   Kostyrko Christina
 -   Research Assistant
 
@@ -35,3 +34,17 @@ library(tidyverse)
 ```{r}
 2+2
 ```
+
+
+## Testing for Git
+
+Such a beautiful sunny day!
+
+## Showing the data
+
+```{r}
+post_meal_data
+
+```
+
+
