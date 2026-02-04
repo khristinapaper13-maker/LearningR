@@ -14,8 +14,7 @@ editor: visual
 library(tidyverse)
 
 post_meal_data <-
-read_csv2(here::here("data/post-meal-insulin.csv"))
-
+  read_csv2(here::here("data/post-meal-insulin.csv"))
 ```
 
 ## Colorectal Research Unit
@@ -26,8 +25,8 @@ read_csv2(here::here("data/post-meal-insulin.csv"))
 **I live in Copenhagen and have a sister!** *I loooooove research*
 
 ```{r}
-# new chunck 
- 3*3
+# new chunck
+3 * 3
 ```
 
 ## Simple code
@@ -37,7 +36,7 @@ read_csv2(here::here("data/post-meal-insulin.csv"))
 2+2
 
 ```{r}
-2+2
+2 + 2
 ```
 
 ## Testing for Git
@@ -50,7 +49,6 @@ Such a beautiful sunny day!
 post_meal_data
 
 glimpse(post_meal_data)
-
 ```
 
 ## Plot one continuous variable 
@@ -58,7 +56,7 @@ glimpse(post_meal_data)
 ```{r}
 #| fig-cap: "Distribution of BMI"
 #| label: fig-bmi-histo
-ggplot(post_meal_data, aes(x = BMI)) + 
+ggplot(post_meal_data, aes(x = BMI)) +
   geom_histogram()
 ```
 see @fig-bmi-histo
@@ -86,14 +84,25 @@ ggplot(post_meal_data, aes(x = Group, fill = as.character(glykemi))) +
 
 ```{r fig-bmi-glycemia}
 #| fig-cap: "BMI and glycemia, side by side"
-#| fig-subcap: 
+#| fig-subcap:
 #| - "Distribution of BMI"
 #| - "Number of those with glycemia"
-#| layout-ncol: 2 
+#| layout-ncol: 2
 
 ggplot(post_meal_data, aes(x = BMI)) +
   geom_histogram()
-ggplot(post_meal_data, aes(x = glykemi)) + 
+ggplot(post_meal_data, aes(x = glykemi)) +
   geom_bar()
 ```
 
+
+## Plotting two continuous variables
+
+```{r}
+#| fig-cap: "Scatter plot of BMI and auc for glucose"
+
+#| lable: "fig-bmi-auc-pg"
+ggplot(post_meal_data, aes(x = BMI, y = auc_pg)) +
+  geom_point() +
+  geom_smooth()
+```
