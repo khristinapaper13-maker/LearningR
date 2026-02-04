@@ -2,6 +2,7 @@ TODO: Add more to the title of your project here
 
 # LearningR:
 
+Hi, I am Chris
 TODO: Give a brief description of what your project is about
 
 This project...
