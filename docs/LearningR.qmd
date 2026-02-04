@@ -123,3 +123,32 @@ small_post_meal_data |>
     auc_insuline = auc_ins
   )
 ```
+
+
+## Practice - select and rename taksks
+
+```{r}
+# Task 1.
+post_meal_data |>
+  select(contains("OGTT"))
+
+# Task 2.
+post_meal_data |>
+  select(contains(".."), -contains("..."))
+
+# Task 3.
+post_meal_data |>
+  rename(
+    .minus = ,
+     .minus = 
+    
+    
+# Task 4.
+post_meal_data |>
+  select(id, BMI, Length, Weight, Age |>
+           rename(
+             Height = Length
+           ))
+```
+
+```
